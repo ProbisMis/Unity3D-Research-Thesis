@@ -146,7 +146,7 @@ public class moveorb : MonoBehaviour
 
 
         //No physics controller
-        selfRigidbody.transform.position = new Vector3(0, 1, z_pos); //Move Forward
+        selfRigidbody.transform.position = new Vector3(0, 0.5f , z_pos); //Move Forward
 
         //Moving forward our sphere MovePosition Controller 
         // currentSpeed = transform.forward * Time.deltaTime * speed;
@@ -340,21 +340,21 @@ public class moveorb : MonoBehaviour
         {
 
             AudioManager.Instance.RandomizeSfx(impact);
-            selfRigidbody.transform.position = new Vector3(-1, 1, gameObject.transform.position.z);
+            selfRigidbody.transform.position = new Vector3(-1, 0.5f, gameObject.transform.position.z);
 
         }
 
         if (Input.GetKey(moveR))
         {
             AudioManager.Instance.RandomizeSfx(impact);
-            selfRigidbody.transform.position = new Vector3(1, 1, gameObject.transform.position.z);
+            selfRigidbody.transform.position = new Vector3(1, 0.5f, gameObject.transform.position.z);
 
         }
 
         if (Input.GetKey(jump))
         {
             AudioManager.Instance.RandomizeSfx(impact);
-            selfRigidbody.transform.position = new Vector3(gameObject.transform.position.x, 3, gameObject.transform.position.z);
+            selfRigidbody.transform.position = new Vector3(gameObject.transform.position.x, 2.5f, gameObject.transform.position.z);
         }
     }
 
